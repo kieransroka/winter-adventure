@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Adventure - Home</title>
+    <meta name="description" content="A Winter Escape">
+    <meta name="author" content="Kieran Sroka">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fb81202af3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="index">
+    <header>
+        <!--Nav with Internal Style-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+            style="border-bottom: #008ed6 3px solid; opacity: 0.8;" id="main-nav">
+            <a class="navbar-brand" href="#" style="position: absolute; left: 5%; top: 7px;"><canvas id="logo" width="60" height="60"></canvas></a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accomodation">Accomodation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <p id="username-display" class="text-light mb-0"></p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Video at top of page-->
+        <div id="vid">
+            <div id="overlay"></div>
+            <video autoplay muted loop id="myVideo">
+                <source src="media/video/Mt_Baker.mp4" type="video/mp4">
+            </video>
+            <div id="img-txt" class="text-center text-white mx-auto">
+                <h1 class="heading-primary">
+                    <span class="heading-main">Holidays In The Snow</span><br>
+                    <span class="h2" id="subHead">Skiing & Snowboarding Accomodation</span>
+                </h1>
+            </div>
+        </div>
+        <!--Accomodation Section-->
+        <div id="accomodation" class="container mt-1">
+            <div class="row">
+                <div class="col accom">
+                    <!--Tignes-->
+                    <div class="card">
+                        <img class="card-img-top" src="media/chalet1.jpg" alt="Tignes">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Tignes</h4>
+                            <h5 class="card-subtitle">France</h5>
+                            <p> A very well furnished chalet. The Kalinda is great for those who are after a range of
+                                facilities but don’t wish to travel far. Spa's, gyms, restaurants and a ski shop are
+                                right on your doorstep.</p>
+                            <a class="card-link btn btn-info mt-auto " href="tignes.html">More Details...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col accom">
+                    <!--Morzine-->
+                    <div class="card">
+                        <img class="card-img-top" src="media/chalet2.jpg" alt="Morzine">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Morzine</h4>
+                            <h5 class="card-subtitle">France</h5>
+                            <p>Situated in St Jean d’Aulps in the "Portes du Soleil" on the Grande Route des Alpes and
+                                30 minutes south of Lake Geneva - a perfect spot for holidays all year round.
+                                A 10 minute walk from the centre of the village.</p>
+                            <a class="card-link btn btn-info mt-auto" href="morzine.html">More Details...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col accom">
+                    <!--La Tania-->
+                    <div class="card">
+                        <img class="card-img-top" src="media/chalet3.jpg" alt="La Tania">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">La Tania</h4>
+                            <h5 class="card-subtitle">France</h5>
+                            <p>Chalet 715 is our premier luxury chalet catering for 15 guests. We've created a unique,
+                                warm, welcoming, home away from home for all the old and new. 30 minutes from Lake
+                                Geneva - a perfect spot for holidays all year round.</p>
+                            <a class="card-link btn btn-info mt-auto " href="la-tania.html">More Details...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Services Section-->
+        <div id="services" class="bg-info ">
+            <div class="row" id="serviceRow">
+                <!-- Services Left Collumn-->
+                <div class="col" id="servicesColLeft">
+                    <p class="h1">Services</p>
+                    <p id="serviceTxt">Anyone who has travelled with us will know that it is the experience, quality and
+                        dedication of our ski resort teams and our in-resort ski services that really
+                        sets us apart from anything else you are likely to experience. We aim to continually exceed
+                        clients expectations and ensure every time a client skis with us,
+                        it is their best ski holiday so far.</p>
+                    <i class="far fa-check-square fa-2x mr-2"></i>
+                    <p class="checkmarkTxt">Our childcare teams deliver a unique service, ensuring that every child gets
+                        the attention & support they need.</p>
+                    <br>
+                    <i class="far fa-check-square fa-2x mr-2"></i>
+                    <p class="checkmarkTxt">Our comprehensive range of ski programmes ensure that all our clients enjoy
+                        their time in the mountains.</p>
+                </div>
+                <!--Services Right Collumn-->
+                <div class="col " id="servicesColRight">
+                    <img id="servicePic" src="media/ski-services.jpg" alt="Shop view">
+                </div>
+            </div>
+        </div>
+        <!--Contact Section-->
+        <div id="contact" class="bg-light pt-5">
+            <div class="container">
+                <p class="h2 mb-3">Contact</p>
+                <!--Form Start-->
+                <form class="pb-5">
+                    <!--Name-->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter name" class="form-control" required>
+                    </div>
+                    <!--Email-->
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" placeholder="Enter email" class="form-control" required>
+                    </div>
+                    <!--Address-->
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Address" class="form-control" required>
+                    </div>
+                    <!--Options-->
+                    <div class="form-group">
+                        <label for="area">Area</label>
+                        <select id="area" class="form-control" required>
+                            <option disabled selected value="">Please choose your area:</option>
+                            <option>Accomodation</option>
+                            <option>Services</option>
+                        </select>
+                    </div>
+                    <!--Text area-->
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="3" class="form-control" placeholder="Please enter your message..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class=" btn btn-info form-control">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- Newsletter signup start -->
+        <div id="newsletter" class="modal fade pr-0" aria-hidden="true" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!-- News header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Newsletter Signup</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- News Body -->
+                    <div class="modal-body">
+                        <p>Signup to our newsletter to stay up to date with exclusive offers!</p>
+                        <!-- News form -->
+                        <form onsubmit="modalForm()" id="news-form">
+                            <!--Name-->
+                            <div class="form-group">
+                                <label for="username">First Name</label>
+                                <input type="text" id="username" placeholder="Enter first name" class="form-control"
+                                    required>
+                            </div>
+                            <!--Email-->
+                            <div class="form-group">
+                                <label for="news-email">Email Address</label>
+                                <input type="email" id="news-email" placeholder="Enter email" class="form-control"
+                                    required>
+                            </div>
+                    </div>
+                    <!-- News footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-success">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Thank you modal -->
+        <div id="news-confirm" class="modal fade pr-0" aria-hidden="true" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!-- Thank you header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Thank you body -->
+                    <div class="modal-body">
+                        You have been signed up to our newsletter!
+                    </div>
+                    <!-- Thank you footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer>
+        <nav id="navBtm" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-bottom">
+            <a class="text-light text-center" id="beginnerLink" href="beginner.html">For<br><img id="snowboarder"
+                    src="media/snowboard.png" alt="Snowboarder"><br>Beginners</a>
+            <a class="navbar-brand mx-auto text-center" href="#">Winter Adventures<br><span id="date"></span></a>
+            <button class="btn btn-outline-light" data-toggle="modal" data-target="#newsletter"><i
+                    class="far fa-newspaper"></i> Newsletter</button>
+        </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

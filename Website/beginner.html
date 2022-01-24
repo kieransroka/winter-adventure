@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winter Adventure - Beginners</title>
+  <meta name="description" content="A Winter Escape">
+  <meta name="author" content="Kieran Sroka">
+  <meta name="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/fb81202af3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-offset="25">
+  <header>
+    <!--Nav with internal style-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      style="border-bottom: #008ed6 3px solid; opacity: 0.8;" id="main-nav">
+      <a class="navbar-brand" href="index.html" style="position: absolute; left: 5%; top: 7px;"><canvas id="logo" width="60" height="60"></canvas></a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#accomodation">Accomodation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <p id="username-display" class="text-light mb-0"></p>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--Heading text at top of page-->
+    <div id="beginnerHead" class="container pt-5 mb-4">
+      <h1 class="pt-3">Tips For Beginners</h1>
+      <p class="display-4">Beginnings aren't always easy, but we're here to help!</p>
+    </div>
+    <!--Tips section-->
+    <div id="tips" class="bg-light pb-4">
+      <div class="row" id="tipsRow">
+        <!--Left section of page-->
+        <div class="col" id="tipsColLeft">
+          <h2 class="text-center h4">Tips For Your First Day Snowboarding</h2>
+          <!--Div containing video-->
+          <div class="vidWrapper">
+            <!--Youtube Video-->
+            <iframe id="snowboardVid" src="https://www.youtube.com/embed/SQNc3VBOgEM" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <!--Right section of page-->
+        <div class="col " id="tipsColRight">
+          <h2 class="text-center h3">Tips For Your First Day Skiing</h2>
+          <!--Div containing video-->
+          <div class="vidWrapper">
+            <!--Youtube Video-->
+            <iframe src="https://www.youtube.com/embed/n-UBie4Ioqo" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Music section heading-->
+    <div id="slopeMusicHead" class="pt-5">
+      <p id="musicHead" class="h1">Music For The Slopes</p>
+      <p class="display-4">Music that gets up pumped up before we hit the slopes!</p>
+    </div>
+    <!--Music section-->
+    <div id="slopeMusic" class="container bg-light">
+      <div class="row" id="musicRow">
+        <!--Left section-->
+        <div class="col" id="musicColLeft">
+          <!--Containing box-->
+          <div class="audioWrapper bg-dark text-white">
+            <!--Image-->
+            <img class="audioPic" src="media/audioPic.jpg" alt="snowboarder">
+            <p class="audioTxt">MGMT - Kids</p>
+            <!--Audio-->
+            <audio controls>
+              <source src="media/audio/mgmtKids.mp3">
+            </audio>
+          </div>
+        </div>
+        <!--Right section-->
+        <div class="col " id="musicColRight">
+          <!--Containing box-->
+          <div class="audioWrapper bg-dark text-white">
+            <!--Image-->
+            <img class="audioPic" src="media/audioPic.jpg" alt="snowboarder">
+            <p class="audioTxt">Awolnation - Sail</p>
+            <!--Audio-->
+            <audio controls>
+              <source src="media/audio/awolnationSail.mp3">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer>
+    <nav id="navBtm" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-bottom">
+      <a class="text-light text-center" id="beginnerLink" href="beginner.html">For<br><img id="snowboarder"
+          src="media/snowboard.png" alt="Snowboarder"><br>Beginners</a>
+      <a class="navbar-brand mx-auto text-center" href="#">Winter Adventures<br><span id="date"></span></a>
+      <button class="btn btn-outline-light" data-toggle="modal" data-target="#newsletter"><i
+        class="far fa-newspaper"></i> Newsletter</button>
+    </nav>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

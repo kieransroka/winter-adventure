@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Bebas+Neue&family=Libre+Baskerville:wght@700&display=swap');
+
+html {
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    padding-right: 0px !important;
+}
+/*Style for h1*/
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 2px;
+}
+/*Headings below h1*/
+#subHead {
+    font-family: 'Bebas Neue', cursive;
+}
+/*Font for body*/
+main {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.2rem;
+}
+/*Video at top of index*/
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    object-fit: cover;
+}
+
+#vid {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.363), rgba(12, 12, 12, 0.507));
+    z-index: 2;
+}
+
+#img-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+/*Accomodation section on index*/
+/*Padding and margin tops to help with scrollspy covering content with navbar*/
+#accomodation {
+    padding-top: 66px;
+    margin-top: -66px;
+    margin-bottom: 66px;
+}/*Card height on index*/
+.card {
+    min-height: 100%;
+}
+/*Services secion on index*/
+#services {
+    padding-top: 66px;
+    padding-bottom: 66px;
+}
+
+#serviceRow {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/*Left collumn used on index for services, and reused for chalet pages*/
+#servicesColLeft {
+    color: white;
+    max-width: 50%;
+    min-width: 715px;
+    padding-left: 25%;
+}
+/*Text next to checkmarks on service on index, and chalet pages*/
+.checkmarkTxt {
+    overflow: hidden;
+}
+/*Check mark on service on index, and chalet pages*/
+.fa-check-square {
+    float: left;
+}
+/*Right collumn used on index for services, and reused for chalet pages*/
+#servicesColRight {
+    padding-right: 0;
+}
+/*Card images for chalet pictures*/
+#servicePic {
+    width: 75%;
+    min-width: 425px;
+    max-width: 734px;
+    max-height: 449px;
+    clip-path: ellipse(50% 40% at 50% 50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+/*Contact section*/
+#contact {
+    width: 100%;
+    height: 100%;
+}
+/*Div containing carousel on chalet pages*/
+#lodgePics {
+    width: 60%;
+    min-width: 690px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Images on carousel*/
+.carousel-item img {
+    overflow: hidden;
+    height: 100%;
+    max-height: 537px;
+}
+
+/*Footer*/
+#navBtm {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*Snowboard img on footer*/
+#snowboarder {
+    width: 65px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+/*Font around snowboarder img on footer*/
+#beginnerLink {
+    font-family: 'Bebas Neue', cursive;
+}
+/*Heading section on beginner page*/
+#beginnerHead {
+    width: 60%;
+    min-width: 690px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Grid on beginner page*/
+#tipsRow {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+}
+/*Border properties example*/
+#tipsColLeft {
+    max-width: 50%;
+    border-right: solid rgb(236, 236, 236);
+}
+
+#tipsColRight {
+    max-width: 50%;
+}
+/*Wraps around youtube videos on beginner page*/
+.vidWrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+/*Youtube videos on beginner page*/
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/*Music heading on beginner page styled as h1*/
+/*Font Properties example*/
+#musicHead {
+    font-family: 'Libre Baskerville', serif;
+}
+/*Div containing music section heading*/
+#slopeMusicHead {
+    width: 60%;
+    min-width: 690px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Section containing audio*/
+#slopeMusic {
+    min-width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+/*Grid for audio*/
+#musicRow {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#musicColLeft {
+    min-width: 50%;
+    padding-left: 25%;
+    margin-right: auto;
+}
+
+#musicColRight {
+    max-width: 50%;
+    padding-right: 25%;
+    margin-left: auto;
+}
+/*Div containing each audio*/
+/*Text properties example*/
+.audioWrapper {
+    max-width: 375px;
+    min-width: 345px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 25px;
+    border-radius: 5px;
+}
+/*Picture on each audio*/
+.audioPic {
+    max-width: 89%;
+    height: 55%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+/*Text on audio*/
+.audioTxt {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Map */
+.map{
+    width: 100%;
+    height: 480px;
+}
+
+/* Weather */
+.widget-left--blue, .widget-left__body--blue, .widget-left-menu__links--blue{
+    background-image: none !important;
+    background-color: teal !important;
+}
+.widget-left-menu--blue{
+    background-image: none !important;
+    background-color:#343a40 !important;
+    color: white !important;
+}
+.widget-left-menu__header{
+    color: unset !important;
+}
+.widget-left-menu__layout{
+    border-color: #008ed6 !important;
+}
+.widget-left-menu__logo_black{
+    display: none !important;
+}
+.axis path{
+    fill: #008ed6 !important;
+    stroke: #008ed6 !important;
+}
+#openweathermap-widget-2{
+    display: none !important;
+}
+
+/* Booking */
+#ski-pic, #snow-pic{
+    min-height: 150px;
+}
+/*Media query for music collumns, reduces padding to stop overlap*/
+@media (max-width: 1400px) {
+    #musicColLeft {
+        padding-left: 7%;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #musicColRight {
+        padding-right: 7%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1230px) {
+    /*Plits into single collumn*/
+    #servicesColLeft {
+        padding-left: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        min-width: unset;
+    }
+    /*Centers text*/
+    #beginnerHead {
+        width: 100%;
+        text-align: center;
+        min-width: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Splits videos to single collumn*/
+    #tipsColLeft {
+        text-align: center;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 100vw;
+        max-width: 100%;
+        border-right: none;
+    }
+
+    #tipsColRight {
+        text-align: center;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        min-width: 100vw;
+    }
+    /*Centers text*/
+    #slopeMusicHead {
+        width: 100%;
+        text-align: center;
+        min-width: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    .carousel-item img {
+        max-height: 407px;
+    }
+}
+
+@media only screen and (max-width:733px){
+    #openweathermap-widget-1,  #openweathermap-widget-1 .widget-left,  #openweathermap-widget-1 .widget-left__body,  #openweathermap-widget-1 .widget-left-menu__layout{
+        width: 99% !important;
+    }
+    #openweathermap-widget-1 .widget-left-menu__layout{
+        padding-left: 10px;
+    }
+    #openweathermap-widget-1 .weather-left-card{
+        display: none !important;
+    }
+    #openweathermap-widget-2{
+        display: block !important;
+    }
+
+}
+@media only screen and (max-width: 504px){
+    #openweathermap-widget-1{
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 900px) {
+    /*Changes video on index page to still image*/
+    /*Background properties*/
+    #vid {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(media/video/mobile/mobile-home-page.jpg);
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    #overlay {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.363), rgba(12, 12, 12, 0.507));
+    }
+    
+    #myVideo {
+        display: none;
+    }
+    /*For service grid on index, and reused for chalet pages*/
+    #serviceRow {
+        margin-left: 0;
+    }
+    
+    #servicesColLeft {
+        text-align: center;
+        padding-left: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        min-width: unset;
+    }
+    
+    #servicePic {
+        transform: translate(-50%, -55%);
+        min-width: 90vw;
+    }
+    /*For accomodation collumn on index*/
+    .accom {
+        min-width: 100%;
+    }
+    /*For div containing carousel on chalet pages*/
+    #lodgePics {
+        width: 100%;
+        min-width: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*For images on carousel*/
+    .carousel-item img {
+        height: 100%;
+        min-height: 400px;
+    }
+    /*For tips grid on beginner page*/
+    #tipsRow {
+        margin-left: 0;
+    }
+    
+    #tipsColLeft {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 100%;
+        max-width: 100%;
+        border-right: none;
+    }
+    
+    #tipsColRight {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    /*For music grid on beginner page*/
+    #musicColLeft {
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #musicColRight {
+        min-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /*Sets width of audio bar on beginner page*/
+    audio{
+        max-width: 85%;
+    }
+    /*Div containing audio on beginner page*/
+    .audioWrapper {
+        min-width: 75%;
+        background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(156, 154, 154, 0.158) 100%);
+    }
+}
+@media (max-width: 433px) {
+    /*Div containing audio on beginner page*/
+    .audioWrapper {
+        min-width: 100% !important;
+    }
+}
