@@ -1,3 +1,22 @@
+function locationHandler(data) {
+    if (data.data === 'locationRequest') {
+        locationRel = window.location.href;
+        parent.postMessage(locationRel, '*');
+    }
+    else if (data.data === 'windowHistory') {
+        this.history.back();
+    }
+    else if (data.data === 'windowFwd') {
+        this.history.forward();
+    }
+    else if (data.data === 'windowFocus') {
+        window.addEventListener("click", function () {
+            windowFocus = 'windowFocus';
+            parent.postMessage(windowFocus, '*');
+        })
+    }
+}
+
 window.addEventListener("load", function () {
     let date = new Date();
     let year = date.getFullYear();
@@ -152,12 +171,12 @@ $(document).ready(function () {
         var map = new H.Map(
             document.getElementById('la-tania-map'),
             defaultLayers.vector.normal.map, {
-                zoom: 14,
-                center: {
-                    lat: 45.43100063066549,
-                    lng: 6.596403659783837
-                },
-            });
+            zoom: 14,
+            center: {
+                lat: 45.43100063066549,
+                lng: 6.596403659783837
+            },
+        });
         var marker = new H.map.Marker({
             lat: 45.43100063066549,
             lng: 6.596403659783837
@@ -174,12 +193,12 @@ $(document).ready(function () {
         map = new H.Map(
             document.getElementById('tignes-map'),
             defaultLayers.vector.normal.map, {
-                zoom: 14,
-                center: {
-                    lat: 45.46938451876267,
-                    lng: 6.906942834309851
-                },
-            });
+            zoom: 14,
+            center: {
+                lat: 45.46938451876267,
+                lng: 6.906942834309851
+            },
+        });
         marker = new H.map.Marker({
             lat: 45.46938451876267,
             lng: 6.906942834309851
@@ -196,12 +215,12 @@ $(document).ready(function () {
         map = new H.Map(
             document.getElementById('morzine-map'),
             defaultLayers.vector.normal.map, {
-                zoom: 14,
-                center: {
-                    lat: 46.180041000378395,
-                    lng: 6.701882515310196
-                },
-            });
+            zoom: 14,
+            center: {
+                lat: 46.180041000378395,
+                lng: 6.701882515310196
+            },
+        });
         marker = new H.map.Marker({
             lat: 46.180041000378395,
             lng: 6.701882515310196
