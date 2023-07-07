@@ -150,139 +150,142 @@ context.lineTo(43, 10);
 context.stroke();
 context.closePath();
 
-
-// Maps
-// Create an icon, an object holding the latitude and longitude, and a marker:
-var icon = new H.map.Icon('media/skiing-man.svg', {
-    size: {
-        w: 35,
-        h: 35
-    }
-});
-$(document).ready(function () {
-    var platform = new H.service.Platform({
-        'apikey': 'mPb-w8DmE_ZIEJbjsjXE4yI4ywfS2__qwtO0OYwY5Lo'
+mapContain = document.getElementsByClassName("map")[0];
+if (mapContain) {
+    // Maps
+    // Create an icon, an object holding the latitude and longitude, and a marker:
+    var icon = new H.map.Icon('media/skiing-man.svg', {
+        size: {
+            w: 35,
+            h: 35
+        }
     });
-    // Obtain the default map types from the platform object:
-    var defaultLayers = platform.createDefaultLayers();
-    //La Tania
-    // Instantiate (and display) a map object:
-    if (window.location.href.includes("la-tania")) {
-        var map = new H.Map(
-            document.getElementById('la-tania-map'),
-            defaultLayers.vector.normal.map, {
-            zoom: 14,
-            center: {
+    $(document).ready(function () {
+        var platform = new H.service.Platform({
+            'apikey': 'mPb-w8DmE_ZIEJbjsjXE4yI4ywfS2__qwtO0OYwY5Lo'
+        });
+        // Obtain the default map types from the platform object:
+        var defaultLayers = platform.createDefaultLayers();
+        //La Tania
+        // Instantiate (and display) a map object:
+        if (window.location.href.includes("la-tania")) {
+            var map = new H.Map(
+                document.getElementById('la-tania-map'),
+                defaultLayers.vector.normal.map, {
+                zoom: 14,
+                center: {
+                    lat: 45.43100063066549,
+                    lng: 6.596403659783837
+                },
+            });
+            var marker = new H.map.Marker({
                 lat: 45.43100063066549,
                 lng: 6.596403659783837
-            },
-        });
-        var marker = new H.map.Marker({
-            lat: 45.43100063066549,
-            lng: 6.596403659783837
-        }, {
-            icon: icon
-        });
-        // Add the marker to the map
-        map.addObject(marker);
-        var circle = new H.map.Circle({
-            lat: 45.43100063066549,
-            lng: 6.596403659783837
-        }, 450)
-    } else if (window.location.href.includes("tignes")) {
-        map = new H.Map(
-            document.getElementById('tignes-map'),
-            defaultLayers.vector.normal.map, {
-            zoom: 14,
-            center: {
+            }, {
+                icon: icon
+            });
+            // Add the marker to the map
+            map.addObject(marker);
+            var circle = new H.map.Circle({
+                lat: 45.43100063066549,
+                lng: 6.596403659783837
+            }, 450)
+        } else if (window.location.href.includes("tignes")) {
+            map = new H.Map(
+                document.getElementById('tignes-map'),
+                defaultLayers.vector.normal.map, {
+                zoom: 14,
+                center: {
+                    lat: 45.46938451876267,
+                    lng: 6.906942834309851
+                },
+            });
+            marker = new H.map.Marker({
                 lat: 45.46938451876267,
                 lng: 6.906942834309851
-            },
-        });
-        marker = new H.map.Marker({
-            lat: 45.46938451876267,
-            lng: 6.906942834309851
-        }, {
-            icon: icon
-        });
-        // Add the marker to the map
-        map.addObject(marker);
-        circle = new H.map.Circle({
-            lat: 45.46938451876267,
-            lng: 6.906942834309851
-        }, 1000)
-    } else if (window.location.href.includes("morzine")) {
-        map = new H.Map(
-            document.getElementById('morzine-map'),
-            defaultLayers.vector.normal.map, {
-            zoom: 14,
-            center: {
+            }, {
+                icon: icon
+            });
+            // Add the marker to the map
+            map.addObject(marker);
+            circle = new H.map.Circle({
+                lat: 45.46938451876267,
+                lng: 6.906942834309851
+            }, 1000)
+        } else if (window.location.href.includes("morzine")) {
+            map = new H.Map(
+                document.getElementById('morzine-map'),
+                defaultLayers.vector.normal.map, {
+                zoom: 14,
+                center: {
+                    lat: 46.180041000378395,
+                    lng: 6.701882515310196
+                },
+            });
+            marker = new H.map.Marker({
                 lat: 46.180041000378395,
                 lng: 6.701882515310196
-            },
+            }, {
+                icon: icon
+            });
+            // Add the marker to the map
+            map.addObject(marker);
+            circle = new H.map.Circle({
+                lat: 46.180041000378395,
+                lng: 6.701882515310196
+            }, 1050)
+        }
+        map.addObject(circle);
+        // Create the default UI:
+        H.ui.UI.createDefault(map, defaultLayers);
+        window.addEventListener('resize', function () {
+            map.getViewPort().resize();
         });
-        marker = new H.map.Marker({
-            lat: 46.180041000378395,
-            lng: 6.701882515310196
-        }, {
-            icon: icon
-        });
-        // Add the marker to the map
-        map.addObject(marker);
-        circle = new H.map.Circle({
-            lat: 46.180041000378395,
-            lng: 6.701882515310196
-        }, 1050)
-    }
-    map.addObject(circle);
-    // Create the default UI:
-    H.ui.UI.createDefault(map, defaultLayers);
-    window.addEventListener('resize', function () {
-        map.getViewPort().resize();
-    });
-})
+    })
 
-// Weather
-let city;
-if (window.location.href.includes("tignes")) {
-    city = "2972607";
-} else if (window.location.href.includes("la-tania")) {
-    city = "2975517";
-} else if (window.location.href.includes("morzine")) {
-    city = "2991630";
+    // Weather
+    let city;
+    if (window.location.href.includes("tignes")) {
+        city = "2972607";
+    } else if (window.location.href.includes("la-tania")) {
+        city = "2975517";
+    } else if (window.location.href.includes("morzine")) {
+        city = "2991630";
+    }
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({
+        id: 1,
+        cityid: city,
+        appid: '1fc0d895e8bfc7f06adecbf7dce883b9',
+        units: 'metric',
+        containerid: 'openweathermap-widget-1',
+    });
+    (function () {
+        var script = document.createElement('script');
+        script.async = true;
+        script.charset = "utf-8";
+        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);
+    })();
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({
+        id: 2,
+        cityid: city,
+        appid: '1fc0d895e8bfc7f06adecbf7dce883b9',
+        units: 'metric',
+        containerid: 'openweathermap-widget-2',
+    });
+    (function () {
+        var script = document.createElement('script');
+        script.async = true;
+        script.charset = "utf-8";
+        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);
+    })();
+
 }
-window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-window.myWidgetParam.push({
-    id: 1,
-    cityid: city,
-    appid: '1fc0d895e8bfc7f06adecbf7dce883b9',
-    units: 'metric',
-    containerid: 'openweathermap-widget-1',
-});
-(function () {
-    var script = document.createElement('script');
-    script.async = true;
-    script.charset = "utf-8";
-    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(script, s);
-})();
-window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-window.myWidgetParam.push({
-    id: 2,
-    cityid: city,
-    appid: '1fc0d895e8bfc7f06adecbf7dce883b9',
-    units: 'metric',
-    containerid: 'openweathermap-widget-2',
-});
-(function () {
-    var script = document.createElement('script');
-    script.async = true;
-    script.charset = "utf-8";
-    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(script, s);
-})();
 
 //Booking
 function bookingPrice() {
