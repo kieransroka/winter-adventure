@@ -17,6 +17,8 @@ function locationHandler(data) {
     }
 }
 
+window.addEventListener('message', locationHandler, false);
+
 window.addEventListener("load", function () {
     let date = new Date();
     let year = date.getFullYear();
